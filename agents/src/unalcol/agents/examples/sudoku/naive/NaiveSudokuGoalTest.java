@@ -1,6 +1,7 @@
 package unalcol.agents.examples.sudoku.naive;
 import unalcol.agents.search.*;
 import unalcol.reflect.tag.TaggedObject;
+import unalcol.sort.Order;
 
 /**
  * <p>Title: </p>
@@ -24,7 +25,12 @@ public Boolean apply(TaggedObject<NaiveSudokuBoardState> arg0) {
     return null;
 }
 
-@Override
+    @Override
+    public Order<Boolean> order() {
+        return null;
+    }
+
+    @Override
 public Boolean apply(NaiveSudokuBoardState state) {
     return state.board.solved();
 }
